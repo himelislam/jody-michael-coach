@@ -1,0 +1,44 @@
+[
+    {
+        "id" : 1,
+        "name" : "30-Minute Career Q&A",
+        "price" : 49,
+        "img" : "https://www.themuse.com/static/images/coach-connect/offerings/30-minute-career-consultation.jpg?v=1067b6002760cebf416152039e1549a35cdd82b2",
+        "description" : "Imagine having your own expert on call to answer any career questions you have, as soon as they come up. Now you do."
+    },
+    {
+        "id" : 2,
+        "name" : "Job Search Strategy",
+        "price" : 99,
+        "img" : "https://www.themuse.com/static/images/coach-connect/offerings/job-search-strategy.jpg?v=1067b6002760cebf416152039e1549a35cdd82b2",
+        "description" : "Job searching can be an overwhelming process. The right strategy can make it easier and help you land a job much faster."
+    },
+    {
+        "id" : 3,
+        "name" : "Leadership Coaching",
+        "price" : 149,
+        "img" : "https://www.themuse.com/static/images/coach-connect/offerings/leadership-coaching.jpg?v=1067b6002760cebf416152039e1549a35cdd82b2",
+        "description" : "All great leaders have gotten help along the way. Leadership coaching can help you become a better manager, establish yourself as a leader, and, in general, excel in any organization."
+    },
+    {
+        "id" : 4,
+        "name" : "Interview Coaching",
+        "price" : 149,
+        "img" : "https://www.themuse.com/static/images/coach-connect/offerings/interview-coaching.jpg?v=1067b6002760cebf416152039e1549a35cdd82b2",
+        "description" : "When it comes to landing a job, it's all about your interviewing skills. And our coaches are the best at helping you overcome your interview fears, refine your pitch, and tackle even the hardest interview questions."
+    },
+    {
+        "id" : 5,
+        "name" : "Networking Strategy",
+        "price" : 79,
+        "img" : "https://www.themuse.com/static/images/coach-connect/offerings/professional-networking-strategy.jpg?v=1067b6002760cebf416152039e1549a35cdd82b2",
+        "description" : "Networking is one of the single greatest things you can do for your career on a regular basis. Get the confidence and help you need to do it well and reach your career goals."
+    },
+    {
+        "id" : 6,
+        "name" : "Resume Review",
+        "price" : 119,
+        "img" : "https://www.themuse.com/static/images/coach-connect/offerings/resume-review.jpg?v=1067b6002760cebf416152039e1549a35cdd82b2",
+        "description" : "Work with a resume review coach to turn your existing resume into an eye-catching, ATS-beating doc that clearly tells hiring managers why they should bring you in for an interview."
+    }
+]
