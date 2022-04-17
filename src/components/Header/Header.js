@@ -1,8 +1,14 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 import { Link, NavLink } from 'react-router-dom';
+import auth from '../../firebse.init';
 
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+
+    console.log(user);
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -51,18 +57,39 @@ const Header = () => {
                             >
                                 About
                             </NavLink>
+                            {
+                                user ? 
+                                <NavLink
+                                onClick={()=>signOut(auth)}
+                                className={({ isActive }) => (isActive ? "text-decoration-none text-white me-3" : "text-decoration-none text-secondary me-3")}
+                                to='/login'
+                            >
+                                Log Out
+                            </NavLink> 
+                            :
                             <NavLink
                                 className={({ isActive }) => (isActive ? "text-decoration-none text-white me-3" : "text-decoration-none text-secondary me-3")}
                                 to='/login'
                             >
                                 Login
                             </NavLink>
+                            }
+                            {
+                                user?
+                                <NavLink
+                                className={({ isActive }) => (isActive ? "text-decoration-none text-white me-3" : "text-decoration-none text-secondary me-3")}
+                                to='/'
+                            >
+                                {user?.displayName}
+                            </NavLink>
+                            :
                             <NavLink
                                 className={({ isActive }) => (isActive ? "text-decoration-none text-white me-3" : "text-decoration-none text-secondary me-3")}
                                 to='/signup'
                             >
                                 Sign up
                             </NavLink>
+                            }
                             {/* <Nav.Link href="">Services</Nav.Link>
                             <Nav.Link href="">Blog</Nav.Link>
                             <Nav.Link href="">About</Nav.Link>

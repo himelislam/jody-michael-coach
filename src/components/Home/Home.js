@@ -9,7 +9,7 @@ const Home = () => {
                 <Carousel.Item>
                     <img
                         style={{ height: '700px'}}
-                        className="d-block w-100 img-fluid"
+                        className="d-block w-100 img-fluid opacity-75"
                         src="https://www.jodymichael.com/wp-content/uploads/2017/10/Janet_Mesic_Mackie-jodymichael-107-Edit-e1510080254192.jpg"
                         alt="First slide"
                     />
@@ -21,7 +21,7 @@ const Home = () => {
                 <Carousel.Item>
                     <img
                         style={{ height: '700px' }}
-                        className="d-block w-100 img-fluid"
+                        className="d-block w-100 img-fluid opacity-75"
                         src="https://www.jodymichael.com/wp-content/uploads/2017/10/Janet_Mesic_Mackie-jodymichael-018-Edit-e1510079295749.jpg"
                         alt="Second slide"
                     />
@@ -34,7 +34,7 @@ const Home = () => {
                 {/* <Carousel.Item>
                     <img
                         style={{ height: '700px' }}
-                        className="d-block w-100 img-fluid"
+                        className="d-block w-100 img-fluid opacity-75"
                         src="https://www.jodymichael.com/wp-content/uploads/2017/11/MSong-Accountabilty-Table-Set-e1510088230317.jpg"
                         alt="Third slide"
                     />
