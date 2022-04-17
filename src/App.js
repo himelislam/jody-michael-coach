@@ -10,6 +10,7 @@ import SignUp from './components/SignUp/SignUp'
 import NotFound from './components/NotFound/NotFound'
 import { Route, Routes } from 'react-router-dom';
 import Checkout from './components/Checkout/Checkout';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

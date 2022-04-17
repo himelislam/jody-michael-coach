@@ -8,16 +8,16 @@ const Login = () => {
     return (
         <div className='w-50 mx-auto bg-secondary p-4 rounded my-5 py-5'>
             <Form>
-                <Form.Group className="mb-5" controlId="formBasicEmail">
+                <Form.Group className="mb-4" controlId="formBasicEmail">
                     {/* <Form.Label>Email address</Form.Label> */}
                     <Form.Control className='bg-dark b-none text-white p-3' type="email" placeholder="Enter email" />
                 </Form.Group>
 
-                <Form.Group className="mb-5" controlId="formBasicPassword">
+                <Form.Group className="mb-4" controlId="formBasicPassword">
                     {/* <Form.Label>Password</Form.Label> */}
                     <Form.Control className='bg-dark b-none text-white p-3' type="password" placeholder="Password" />
                 </Form.Group>
-                <Form.Group className="mb-5" controlId="formBasicCheckbox">
+                <Form.Group className="mb-4" controlId="formBasicCheckbox">
                     {/* <Form.Check type="checkbox" label="Check me out" /> */}
                     <p>New User?  <span className='text-info btn p-0 mb-1' onClick={()=> navigate('/signup')}> Create A New Account.</span></p>
                     <p>Forget Password?  <span className='text-info btn p-0 mb-1' onClick={()=> navigate('/signup')}> Reset Password.</span></p>

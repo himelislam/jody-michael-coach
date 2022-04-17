@@ -35,22 +35,22 @@ const SignUp = () => {
     return (
         <div className='w-50 mx-auto bg-secondary p-4 rounded my-5 py-5'>
             <Form onSubmit={handleUserSignUp}>
-                <Form.Group className="mb-5" controlId="formBasicEmail">
+                <Form.Group className="mb-4" controlId="formBasicEmail">
                     {/* <Form.Label>Email address</Form.Label> */}
                     <Form.Control className='bg-dark b-none text-white p-3' name="email" type="email" placeholder="Enter email" />
                 </Form.Group>
 
-                <Form.Group className="mb-5" controlId="formBasicPassword">
+                <Form.Group className="mb-4" controlId="formBasicPassword">
                     {/* <Form.Label>Password</Form.Label> */}
                     <Form.Control className='bg-dark b-none text-white p-3' name="password" type="password" placeholder="Password" />
                 </Form.Group>
 
-                <Form.Group className="mb-5" controlId="formBasicPassword">
+                <Form.Group className="mb-4" controlId="formBasicPassword">
                     {/* <Form.Label>Password</Form.Label> */}
                     <Form.Control className='bg-dark b-none text-white p-3' name="confirmPassword" type="password" placeholder="Confirm Password" />
                 </Form.Group>
 
-                <Form.Group className="mb-5" controlId="formBasicCheckbox">
+                <Form.Group className="mb-4" controlId="formBasicCheckbox">
                     {/* <Form.Check type="checkbox" label="Check me out" /> */}
                     <p>Already Have An Account?  <span className='text-info btn p-0 mb-1' onClick={()=> navigate('/login')}>Login Here</span></p>
                 </Form.Group>
