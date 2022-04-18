@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className='container text-white d-flex my-4 py-4'>
+        <div style={{minHeight: "400px"}} className='container text-white d-flex my-4 py-4'>
             <div className='col-lg-6'>
                 <h3 className='fw-light'>MESSAGE FROM JODY</h3>
                 <h2>Can People Really Change?</h2>

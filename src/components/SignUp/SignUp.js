@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../firebse.init'
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { async } from '@firebase/util';
+import Loading from '../Loading/Loading';
 
 
 const SignUp = () => {
@@ -20,33 +21,30 @@ const SignUp = () => {
     const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState('');
     
-      if(error){
-          console.log(error.message);
-          setErrorMessage(error?.message)
-      }
-      if(error1){
-          console.log(error1);
+      if(loading || updating){
+          return <Loading></Loading>
       }
       if(user){
-          console.log(user);
-          navigate('/')
+        navigate('/')
+        console.log('user', user);
       }
 
     const handleUserSignUp = async (event) => {
+        const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         const confirmPassword = event.target.confirmPassword.value;
-        const name = event.target.name.value;
         console.log(email, password, confirmPassword, name);
         
         
         if(password === confirmPassword){
-            createUserWithEmailAndPassword(email, password)
+            await createUserWithEmailAndPassword(email, password)
+            await updateProfile({displayName: name })
+            console.log('update profile');
         }
         else{
             setErrorMessage('Your password mismatched')
         }
-        await updateProfile({displayName: name})
         event.preventDefault()
     }
 

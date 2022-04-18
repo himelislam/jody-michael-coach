@@ -77,7 +77,7 @@ const Header = () => {
                             {
                                 user?
                                 <NavLink
-                                className={({ isActive }) => (isActive ? "text-decoration-none text-white me-3" : "text-decoration-none text-secondary me-3")}
+                                className={({ isActive }) => (isActive ? "text-decoration-none text-info me-3" : "text-decoration-none text-info me-3")}
                                 to='/'
                             >
                                 {user?.displayName}
