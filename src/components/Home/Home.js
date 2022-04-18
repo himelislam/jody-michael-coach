@@ -15,7 +15,7 @@ const Home = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption className='mb-5'>
-                        <h1 className='fw-bold'>Jody Michael Associates</h1>
+                        <h1 className='fw-bold'>Jody Michael</h1>
                         <p>I believe in you and your capacity to transform your leadership, career and life</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -28,7 +28,7 @@ const Home = () => {
                     />
 
                     <Carousel.Caption className='mb-5'>
-                        <h1 className='fw-bold'>Jody Michael Associates</h1>
+                        <h1 className='fw-bold'>Jody Michael</h1>
                         <p>I believe in you and your capacity to transform your leadership, career and life</p>
                     </Carousel.Caption>
                 </Carousel.Item>

@@ -2,8 +2,8 @@ import React from 'react';
 
 const Resources = () => {
     return (
-        <div className='container'>
-            <h2 className='text-white text-center'>Helpful Resources</h2>
+        <div className='container my-5'>
+            <h1 className='text-center my-5 text-white fw-light border p-4'>Helpful Resources</h1>
             <div className='row text-white'>
                 <div className='col-lg-4'>
                     <div>
@@ -12,7 +12,7 @@ const Resources = () => {
                     <div className='mt-2'>
                         <h4 className='fw-light'>LEADERSHIP</h4>
                         <h2>What is an Executive Coach?</h2>
-                        <p className='fw-light'>During some point in your career, there may be an opportunity to consider hiring an executive coach. Whether you seek one out on your own, or your company recommends partnering with a coach, you likely have questions about the process. Here are seven questions and answers to help you navigate executive coaching.</p>
+                        <p className='fw-light'>During some point in your career, there may be an opportunity to consider hiring an executive coach. Whether you seek one out on your own, or your company recommends partnering with a coach, you likely have questions about the process.</p>
                     </div>
                 </div>
                 <div className='col-lg-4'>

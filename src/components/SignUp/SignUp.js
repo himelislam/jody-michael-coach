@@ -49,7 +49,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='w-50 mx-auto bg-secondary p-4 rounded my-5 py-5'>
+        <div style={{minHeight: "400px"}} className='w-50 mx-auto bg-secondary p-4 rounded my-5 py-5'>
             <Form onSubmit={handleUserSignUp}>
                 <Form.Group className="mb-4" controlId="formBasicEmail">
                     {/* <Form.Label>Email address</Form.Label> */}

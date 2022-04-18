@@ -13,7 +13,7 @@ const Services = () => {
     console.log(services);
     return (
         <div style={{minHeight: "400px"}} className='container'>
-            <h2 className='text-center my-3 text-white'>Book My Services {services.length}</h2>
+            <h1 className='text-center my-5 text-white fw-light border p-4'>My Services</h1>
             <div>
                 {
                     services.map(service => <Service
