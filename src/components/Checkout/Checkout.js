@@ -1,14 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { ServicesContext } from '../../App';
 
 const Checkout = () => {
     const { checkoutId } = useParams();
-    const [services, setServices] = useContext(ServicesContext);
-    // console.log(services);
-
+    const [services] = useContext(ServicesContext);
     const service = services.find(service => service.id == checkoutId);
-    console.log(service);
+
+
     return (
         <div style={{minHeight: "400px"}} className='container text-white'>
             <div style={{height : "300px"}} className='border rounded row align-items-center my-5 p-4'>

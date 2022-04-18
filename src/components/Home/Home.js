@@ -32,19 +32,6 @@ const Home = () => {
                         <p>I believe in you and your capacity to transform your leadership, career and life</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                {/* <Carousel.Item>
-                    <img
-                        style={{ height: '700px' }}
-                        className="d-block w-100 img-fluid opacity-75"
-                        src="https://www.jodymichael.com/wp-content/uploads/2017/11/MSong-Accountabilty-Table-Set-e1510088230317.jpg"
-                        alt="Third slide"
-                    />
-
-                    <Carousel.Caption className='mb-5'>
-                        <h1 className='fw-bold'>Jody Michael Associates</h1>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </Carousel.Caption>
-                </Carousel.Item> */}
             </Carousel>
             <Services></Services>
             <Resources></Resources>

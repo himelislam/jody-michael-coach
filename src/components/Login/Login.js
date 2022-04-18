@@ -1,5 +1,4 @@
-import { async } from '@firebase/util';
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -12,22 +11,17 @@ import Loading from '../Loading/Loading';
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
-    let errorMessage;
-
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
-
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-    const navigate = useNavigate();
     const location = useLocation()
-    const from = location.state?.from?.pathname || "/";
+    const navigate = useNavigate();
+    let errorMessage;
+    
+    const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
+    
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
+    const from = location.state?.from?.pathname || "/";
+    
     if(user) {
-        console.log(user);
         navigate(from, {replace: true})
     }
     
@@ -39,6 +33,7 @@ const Login = () => {
         return <Loading></Loading>
     }
     
+    // handle Login with Email and Password
 
     const handleLoginWithEmailAndPassword = event => {
         const email = emailRef.current.value;
@@ -50,6 +45,7 @@ const Login = () => {
 
 
     // handle reset password
+
     const handleResetPassword = async () =>{
         const email = emailRef.current.value;
         if(email){
@@ -59,30 +55,31 @@ const Login = () => {
         else{
             await toast('Please Enter Your Email Address')
         }
-        // event.preventDefault()
     }
     return (
         <div style={{minHeight: "400px"}} className='w-50 mx-auto bg-secondary p-4 rounded my-5 py-5'>
             <Form onSubmit={handleLoginWithEmailAndPassword}>
                 <Form.Group className="mb-4" controlId="formBasicEmail">
-                    {/* <Form.Label>Email address</Form.Label> */}
                     <Form.Control ref={emailRef} className='bg-dark b-none text-white p-3' name='email' type="email" placeholder="Enter email" />
                 </Form.Group>
 
                 <Form.Group className="mb-4" controlId="formBasicPassword">
-                    {/* <Form.Label>Password</Form.Label> */}
                     <Form.Control ref={passwordRef} className='bg-dark b-none text-white p-3' name='password' type="password" placeholder="Password" />
                 </Form.Group>
+
                 <Form.Group className="mb-4" controlId="formBasicCheckbox">
-                    {/* <Form.Check type="checkbox" label="Check me out" /> */}
                     <p>New User?  <span className='text-info btn p-0 mb-1' onClick={() => navigate('/signup')}> Create A New Account.</span></p>
                     <p>Forget Password?  <span onClick={handleResetPassword} className='text-info btn p-0 mb-1'> Reset Password.</span></p>
                 </Form.Group>
+
                 {errorMessage}
+
                 <Button className='btn btn-dark w-50 mx-auto p-2 fs-5 fw-light d-block' variant="primary" type="submit">
                     Login
                 </Button>
+
                 <ToastContainer />
+
                 <SocialLogin></SocialLogin>
             </Form>
         </div>
