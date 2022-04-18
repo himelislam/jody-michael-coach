@@ -14,22 +14,18 @@ const SignUp = () => {
 
     if (user) {
         navigate('/')
-        console.log(user);
     }
-    
+
     const handleUserSignUp = async (event) => {
         event.preventDefault()
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         const confirmPassword = event.target.confirmPassword.value;
-        console.log(email, password, confirmPassword, name);
-
 
         if (password === confirmPassword) {
             await createUserWithEmailAndPassword(email, password)
             await updateProfile({ displayName: name })
-            console.log('update profile');
         }
         else {
             setErrorMessage('Your password mismatched')
