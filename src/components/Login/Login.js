@@ -26,7 +26,7 @@ const Login = () => {
     }
     
     if(error) {
-        errorMessage = <p className='text-danger fw-bold'>Error : {error?.message}</p>
+        errorMessage = <p className='text-white'>Error : {error?.message}</p>
     }
 
     if(loading){
