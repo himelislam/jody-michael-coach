@@ -8,7 +8,7 @@ const Blogs = () => {
                     <h3 className='fw-light'>Q.1: Difference between authorization and authentication</h3>
                     <p className='fw-light'>Answer:</p>
                     <div>
-                        <p>Authentication :</p>
+                        <p>Authentication:</p>
                         <ul>
                             <li>The identity of users are checked for providing the access to the system.</li>
                             <li>Users or persons are verified.</li>
